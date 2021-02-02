@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/adrian-cv/static/js/main.bb44ce91.chunk.js",
-    "main.js.map": "/adrian-cv/static/js/main.bb44ce91.chunk.js.map",
+    "main.js": "/adrian-cv/static/js/main.a37b751e.chunk.js",
+    "main.js.map": "/adrian-cv/static/js/main.a37b751e.chunk.js.map",
     "runtime-main.js": "/adrian-cv/static/js/runtime-main.4e4a2662.js",
     "runtime-main.js.map": "/adrian-cv/static/js/runtime-main.4e4a2662.js.map",
-    "static/js/2.b57793b4.chunk.js": "/adrian-cv/static/js/2.b57793b4.chunk.js",
-    "static/js/2.b57793b4.chunk.js.map": "/adrian-cv/static/js/2.b57793b4.chunk.js.map",
+    "static/js/2.75d6a4ec.chunk.js": "/adrian-cv/static/js/2.75d6a4ec.chunk.js",
+    "static/js/2.75d6a4ec.chunk.js.map": "/adrian-cv/static/js/2.75d6a4ec.chunk.js.map",
     "index.html": "/adrian-cv/index.html",
-    "static/js/2.b57793b4.chunk.js.LICENSE.txt": "/adrian-cv/static/js/2.b57793b4.chunk.js.LICENSE.txt"
+    "static/js/2.75d6a4ec.chunk.js.LICENSE.txt": "/adrian-cv/static/js/2.75d6a4ec.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.4e4a2662.js",
-    "static/js/2.b57793b4.chunk.js",
-    "static/js/main.bb44ce91.chunk.js"
+    "static/js/2.75d6a4ec.chunk.js",
+    "static/js/main.a37b751e.chunk.js"
   ]
 }
