@@ -1,4 +1,4 @@
-export default {
+const theme = {
   name: 'lightMode',
   colors: {
     primary: {
@@ -18,6 +18,9 @@ export default {
     background: {
       backgroundDefault: '#fff',
       backgroundSpecial: '#f9f9ff'
-    }
+    },
+    sidebarBorder: '#E0E0E0'
   }
 }
+
+export default theme
