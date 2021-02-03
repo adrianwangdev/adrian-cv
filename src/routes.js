@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
-import GlobalStyle from './components/styles/globalStyle'
-import LightMode from './themes/lightMode'
-import DarkMode from './themes/darkMode'
+import GlobalStyle from '@components/styles/globalStyle'
+import LightMode from '@themes/lightMode'
+import DarkMode from '@themes/darkMode'
 
 /* HOC */
 import MainLayout from './hoc/mainLayout'
 
 /* Views */
-import Home from './views/Home'
-import About from './views/About'
-import Experience from './views/Experience'
-import Project from './views/Project'
-import Contact from './views/Contact'
+import Home from '@views/Home'
+import About from '@views/About'
+import Experience from '@views/Experience'
+import Project from '@views/Project'
+import Contact from '@views/Contact'
 
 const Routes = () => {
 

@@ -1,7 +1,7 @@
 import React from 'react'
-import Navbar from './Nav/index'
+import Navbar from './Nav'
 
-import { Menu, MenuTitle } from '../../styles/Sidebar/sidebar'
+import { Menu, MenuTitle } from '@components/styles/Sidebar/sidebar'
 
 const Sidebar = () => {
   

@@ -1,6 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import Nav from '../../../styles/Sidebar/navbar'
+import { NavLink } from 'react-router-dom'
+import Nav from '@components/styles/Sidebar/navbar'
+
+/* Svg Icons */
+import { ReactComponent as HomeIcon } from '@images/nav/home.svg'
+import { ReactComponent as AboutIcon } from '@images/nav/about.svg'
+import { ReactComponent as WorkIcon } from '@images/nav/work.svg'
+import { ReactComponent as ProjectIcon } from '@images/nav/project.svg'
+import { ReactComponent as ContactIcon } from '@images/nav/contact.svg'
 
 const Navbar = () => {
 
@@ -8,19 +15,29 @@ const Navbar = () => {
     <Nav>
       <ul>
         <li>
-          <Link to='/'>Home</Link>
+          <NavLink to='/' exact>
+            <HomeIcon />Home
+          </NavLink>
         </li>
         <li>
-          <Link to='/about'>About</Link>
+          <NavLink to='/about'>
+            <AboutIcon />About
+          </NavLink>
         </li>
         <li>
-          <Link to='/experience'>Experience</Link>
+          <NavLink to='/experience'>
+            <WorkIcon />Experience
+          </NavLink>
         </li>
         <li>
-          <Link to='/project'>Project</Link>
+          <NavLink to='/project'>
+            <ProjectIcon />Project
+          </NavLink>
         </li>
         <li>
-          <Link to='/contact'>Contact</Link>
+          <NavLink to='/contact'>
+            <ContactIcon />Contact
+          </NavLink>
         </li>
       </ul>
     </Nav>

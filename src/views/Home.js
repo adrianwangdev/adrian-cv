@@ -1,15 +1,19 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom'
-
+import avatar from '@images/avatar.png'
+import Info from '@components/containers/Home/info'
+import SocialMedia from '@components/containers/Home/socialMedia'
+import { Section, Avatar } from '@components/styles/Home/home'
+import Button from '@components/styles/Button/button'
 
 const Home = () => {
-  const location = useLocation()
-  console.log(location)
 
   return (
-    <div>
-      <h1>Home</h1>
-    </div>
+    <Section>
+      <Avatar src={avatar} alt="avatar" />
+      <Info />
+      <Button primary>聯絡我</Button>
+      <SocialMedia />
+    </Section>
   )
 }
 
