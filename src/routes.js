@@ -18,17 +18,25 @@ import Contact from '@views/Contact'
 const Routes = () => {
 
   const [lightTheme, setLightTheme] = useState(true)
+  const [sidebarDetail, setSidebarDetail] = useState(false)
+
+  // if user not at Home page -> show sidebar detail 
+  const checkLocation = (location) => {
+    location === '/'
+      ? setSidebarDetail(false)
+      : setSidebarDetail(true)
+  }
 
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <ThemeProvider theme={lightTheme ? LightMode : DarkMode}>
-        <MainLayout>
+        <MainLayout sidebarDetail={sidebarDetail}>
           <Switch>
-            <Route path="/" component={Home} exact />
-            <Route path="/about" component={About} />
-            <Route path="/experience" component={Experience} />
-            <Route path="/project" component={Project} />
-            <Route path="/contact" component={Contact} />
+            <Route exact path="/" component={() => <Home checkLocation={checkLocation} />} />
+            <Route path="/about" component={() => <About checkLocation={checkLocation} />} />
+            <Route path="/experience" component={() => <Experience checkLocation={checkLocation} />} />
+            <Route path="/project" component={() => <Project checkLocation={checkLocation} />} />
+            <Route path="/contact" component={() => <Contact checkLocation={checkLocation} />} />
           </Switch>
         </MainLayout>
         <GlobalStyle />

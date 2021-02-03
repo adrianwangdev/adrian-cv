@@ -1,7 +1,10 @@
 import styled from 'styled-components'
 
 const Nav = styled.nav`
-  margin-top: 18rem;
+  transition: all .6s;
+  transform: ${props =>
+    props.showDetail ? 'translateY(0)' : 'translateY(-8%)'
+  };
 
   ul {
     list-style: none;

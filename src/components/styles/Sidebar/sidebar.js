@@ -1,9 +1,13 @@
 import styled from 'styled-components'
 
 const Menu = styled.aside`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 30rem;
+  width: 30rem;
   padding: 5.6rem 4rem;
   border-right: .1rem solid ${props => props.theme.colors.sidebarBorder};
-  width: 30rem;
   height: 100%;
 `
 

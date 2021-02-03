@@ -1,11 +1,11 @@
 import React from 'react'
 import Sidebar from '../components/containers/Sidebar'
 
-const MainLayout = props => (
+const MainLayout = ({ children, sidebarDetail }) => (
   <>
-    <Sidebar />
+    <Sidebar sidebarDetail={sidebarDetail} />
     <>
-      {props.children}
+      {children}
     </>
   </>
 )
