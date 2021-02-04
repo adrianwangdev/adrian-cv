@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 
 const Nav = styled.nav`
-  transition: all .6s;
+  transition: ${props =>
+    props.moveDown ? 'all .6s' : 'all .6s .1s'
+  };
   transform: ${props =>
-    props.showDetail ? 'translateY(0)' : 'translateY(-8%)'
+    props.moveDown ? 'translateY(-4%)' : 'translateY(-120%)'
   };
 
   ul {

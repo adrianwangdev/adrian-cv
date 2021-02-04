@@ -27,6 +27,10 @@ const Button = styled.button`
   &:hover {
     transform: translateY(-.8rem);
   }
+
+  &:focus {
+    outline: none;
+  }
 `
 
 export default Button

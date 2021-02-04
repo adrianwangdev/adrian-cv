@@ -1,11 +1,16 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
 import { useLocation } from 'react-router-dom'
+import { CatStateContext } from '@utilities/context'
 
-const About = ({ checkLocation }) => {
+const About = () => {
 
   const location = useLocation()
+  const { setSidebarDetail } = useContext(CatStateContext)
+
   useEffect(() => {
-    checkLocation(location.pathname)
+    location.pathname === '/'
+      ? setSidebarDetail(false)
+      : setSidebarDetail(true)
   }, [])
 
   return <h1>About</h1>

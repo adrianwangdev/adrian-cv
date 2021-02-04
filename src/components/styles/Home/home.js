@@ -6,6 +6,7 @@ const Section = styled.section`
   justify-content: center;
   align-items: center;
   width: 100%;
+  background-size: cover;
 `
 
 const Avatar = styled.img`

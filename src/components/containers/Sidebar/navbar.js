@@ -1,42 +1,27 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-
-/* Svg Icons */
-import { ReactComponent as HomeIcon } from '@images/nav/home.svg'
-import { ReactComponent as AboutIcon } from '@images/nav/about.svg'
-import { ReactComponent as WorkIcon } from '@images/nav/work.svg'
-import { ReactComponent as ProjectIcon } from '@images/nav/project.svg'
-import { ReactComponent as ContactIcon } from '@images/nav/contact.svg'
+import { routeLink } from '@utilities/routeLink'
 
 const Navbar = () => {
 
+  const element = (item, index) => (
+    <li key={index}>
+      <NavLink to={item.link} exact={item.exact}>
+        <item.icon />
+        {item.text}
+      </NavLink>
+    </li>
+  )
+
+  const renderNavbar = () => (
+    routeLink.map((item, index) => {
+      return element(item, index)
+    })
+  )
+
   return (
     <ul>
-      <li>
-        <NavLink to='/' exact>
-          <HomeIcon />Home
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to='/about'>
-          <AboutIcon />About
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to='/experience'>
-          <WorkIcon />Experience
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to='/project'>
-          <ProjectIcon />Project
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to='/contact'>
-          <ContactIcon />Contact
-        </NavLink>
-      </li>
+      { renderNavbar() }
     </ul>
   )
 }

@@ -22,6 +22,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Montserrat', 'Noto Sans TC', 'Microsoft JhengHei', '微軟正黑體', sans-serif;
     color: ${props => props.theme.colors.text.textDark};
     background: ${props => props.theme.colors.background.backgroundDefault};
+    overflow: hidden;
   }
 
   #root {

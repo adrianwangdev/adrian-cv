@@ -1,7 +1,13 @@
 import styled from 'styled-components'
 
 const AboutMeBlock = styled.div`
-  transform: translateY(-6%);
+  opacity: ${props => props.show ? '1' : '0'};
+  transition: ${props =>
+    props.show ? 'all .6s .2s' : 'all .6s'
+  };
+  transform: ${props =>
+    props.show ? 'translateX(0)' : 'translateX(120%)'
+  };
 
   p, a {
     font-family: 'Noto Sans TC', 'Microsoft JhengHei', '微軟正黑體', sans-serif;

@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { CatStateContext } from '@utilities/context'
 import AboutMe from './aboutMe'
 import Navbar from './navbar'
 import SocialMedia from '@components/containers/socialMedia'
@@ -7,42 +8,22 @@ import { Menu, MenuTitle } from '@components/styles/Sidebar/sidebar'
 import Nav from '@components/styles/Sidebar/navbar'
 import SocialMediaStyle from '@components/styles/Module/socialMedia'
 
-const Sidebar = ({ sidebarDetail }) => {
+const Sidebar = () => {
 
-  const renderTitleType = (sidebarDetail) => {
-    if (sidebarDetail) {
-      return <p>Adrian</p>
-    }
-    return (
-      <>
-        <p><span>Adrian</span>’s</p>
-        <p>CV</p>
-      </>
-    )
-  }
-  
-  const renderNavbarType = (sidebarDetail) => {
-    if (sidebarDetail) {
-      return (
-        <Nav showDetail>
-          <Navbar />
-        </Nav>
-      )
-    }
-    return (
-      <Nav>
-        <Navbar />
-      </Nav >
-    )
-  }
+  const { sidebarDetail } = useContext(CatStateContext)
   
   return (
     <Menu>
-      <MenuTitle>
-        {renderTitleType(sidebarDetail)}
+      <MenuTitle onlyName={sidebarDetail ? true : false}>
+        <p>Adrian<span>’s CV</span></p>
       </MenuTitle>
+
       <AboutMe />
-      {renderNavbarType(sidebarDetail)}
+      
+      <Nav moveDown={sidebarDetail ? true : false} >
+        <Navbar />
+      </Nav>
+
       <SocialMediaStyle inSidebar>
         <SocialMedia />
         <SocialMediaAccount />
