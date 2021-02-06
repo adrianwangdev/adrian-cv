@@ -1,11 +1,20 @@
-import React, { useContext } from 'react'
+import React, { useEffect, useContext } from 'react'
 import { CatStateContext } from '@utilities/context'
+import { skills } from '@utilities/skillTag'
 import { AboutMeBlock, AvatarMask, Description, JobTitle, Detail, Birth, SkillTag } from '@components/styles/Sidebar/aboutMe'
 import avatar from '@images/avatar.png'
 
 const AboutMe = () => {
 
   const { sidebarDetail } = useContext(CatStateContext)
+
+  const skillsOnSidebar = skills.filter(skill => skill.onSidebar)
+
+  const skillTagsElement = (item, index) => <p key={index}>{item}</p>
+
+  const renderSkillTags = () => (
+    skillsOnSidebar.map((item, index) => skillTagsElement(item.name, index))
+  )
 
   return (
     <AboutMeBlock show={sidebarDetail ? true : false}>
@@ -27,11 +36,7 @@ const AboutMe = () => {
         </Detail>
       </Description>
       <SkillTag>
-        <p>HTML5</p>
-        <p>SCSS</p>
-        <p>JS</p>
-        <p>React</p>
-        <p>CSS-in-JS</p>
+        {renderSkillTags(skillsOnSidebar)}
       </SkillTag>
     </AboutMeBlock> 
   )

@@ -14,9 +14,7 @@ const Navbar = () => {
   )
 
   const renderNavbar = () => (
-    routeLink.map((item, index) => {
-      return element(item, index)
-    })
+    routeLink.map((item, index) => element(item, index))
   )
 
   return (
