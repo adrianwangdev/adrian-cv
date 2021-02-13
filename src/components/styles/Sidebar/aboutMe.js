@@ -1,13 +1,18 @@
 import styled from 'styled-components'
 
 const AboutMeBlock = styled.div`
-  opacity: ${props => props.show ? '1' : '0'};
-  transition: ${props =>
-    props.show ? 'all .6s .2s' : 'all .6s'
-  };
-  transform: ${props =>
-    props.show ? 'translateX(0)' : 'translateX(120%)'
-  };
+  ${props => props.show
+    ? (`
+      transition: all .6s .2s;
+      transform: translateX(0);
+      opacity: 1;
+    `)
+    : (`
+      transition: all .6s;
+      transform: translateX(120%);
+      opacity: 0;
+    `)
+  }
 
   p, a {
     font-family: 'Noto Sans TC', 'Microsoft JhengHei', '微軟正黑體', sans-serif;
@@ -18,8 +23,8 @@ const AboutMeBlock = styled.div`
 
 const AvatarMask = styled.div`
   border-radius: 1.6rem;
-  width: 16rem;
-  height: 16rem;
+  width: 12rem;
+  height: 12rem;
   overflow: hidden;
 
   img {
@@ -30,7 +35,7 @@ const AvatarMask = styled.div`
 
 const Description = styled.div`
   margin-top: 1.2rem;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.2rem;
 
   p, a {
     font-size: 1.4rem;
@@ -42,7 +47,6 @@ const Description = styled.div`
 const JobTitle = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: .8rem;
 
   h3 {
     margin-right: 1.6rem;
@@ -68,14 +72,20 @@ const Detail = styled.div`
 const Birth = styled.div`
   display: flex;
 
-  > p:first-child {
+  p {
     margin-right: 1.6rem;
+  }
+
+  > p:last-child {
+    margin-right: 0;
+
   }
 `
 
 const SkillTag = styled.div`
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: -.8rem;
 
   > p {
     margin-right: .8rem;

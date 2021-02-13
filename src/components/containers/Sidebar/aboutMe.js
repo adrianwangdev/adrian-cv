@@ -30,8 +30,8 @@ const AboutMe = () => {
           <Birth>
             <p>1994/06/08</p>
             <p>26 歲</p>
+            <p>新北市</p>
           </Birth>
-          <p>新北市</p>
           <a href="mailto:adrianwangdev@gmail.com">adrianwangdev@gmail.com</a>
         </Detail>
       </Description>

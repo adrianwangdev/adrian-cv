@@ -5,7 +5,7 @@ const Nav = styled.nav`
     props.moveDown ? 'all .6s' : 'all .6s .1s'
   };
   transform: ${props =>
-    props.moveDown ? 'translateY(-4%)' : 'translateY(-120%)'
+    props.moveDown ? 'translateY(-8%)' : 'translateY(-64%)'
   };
 
   ul {

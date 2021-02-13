@@ -14,9 +14,13 @@ const Sidebar = () => {
   
   return (
     <Menu>
-      <MenuTitle onlyName={sidebarDetail ? true : false}>
-        <p>Adrian<span>’s CV</span></p>
-      </MenuTitle>
+      {
+        sidebarDetail
+          ? null
+          : <MenuTitle>
+              <p>Adrian<span>’s CV</span></p>
+            </MenuTitle>
+      }
 
       <AboutMe />
       
@@ -24,7 +28,10 @@ const Sidebar = () => {
         <Navbar />
       </Nav>
 
-      <SocialMediaStyle inSidebar>
+      <SocialMediaStyle
+        inSidebar
+        show={sidebarDetail ? true : false}
+      >
         <SocialMedia />
         <SocialMediaAccount />
       </SocialMediaStyle>

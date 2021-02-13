@@ -6,7 +6,7 @@ const Menu = styled.aside`
   justify-content: space-between;
   min-width: 30rem;
   width: 30rem;
-  padding: 5.6rem 4rem;
+  padding: 3.2rem;
   border-right: .1rem solid ${props => props.theme.colors.sidebarBorder};
   height: 100%;
   overflow: hidden;

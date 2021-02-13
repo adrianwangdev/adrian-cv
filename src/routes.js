@@ -20,6 +20,12 @@ const Routes = () => {
 
   const [lightTheme, setLightTheme] = useState(true)
   const [sidebarDetail, setSidebarDetail] = useState(false)
+  const [windowHeight, setWindowHeight] = useState(0)
+
+  const getWindowHeight = () => {
+    setWindowHeight(window.innerHeight)
+    console.log(windowHeight)
+  }
 
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
