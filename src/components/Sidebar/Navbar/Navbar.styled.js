@@ -18,6 +18,7 @@ const Nav = styled.nav`
     width: 100%;
     text-decoration: none;
     color: ${props => props.theme.colors.text.textDark};
+    transition: all .3s;
 
     svg {
       margin-right: 2.4rem;

@@ -1,5 +1,5 @@
 import React from 'react'
-import Sidebar from '../components/containers/Sidebar'
+import Sidebar from '@components/Sidebar/Sidebar'
 
 const MainLayout = ({children}) => (
   <>
@@ -9,14 +9,5 @@ const MainLayout = ({children}) => (
     </>
   </>
 )
-/* 
-const MainLayout = ({ children, sidebarDetail }) => (
-  <>
-    <Sidebar sidebarDetail={sidebarDetail} />
-    <>
-      {children}
-    </>
-  </>
-)
- */
+
 export default MainLayout

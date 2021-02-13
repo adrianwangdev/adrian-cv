@@ -2,14 +2,18 @@ import React, { useEffect, useContext } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useSpring } from 'react-spring'
 import { CatStateContext } from '@utilities/context'
+
+/* Components */
+import Info from '@components/Home/Info/Info'
+
+/* Styles */
+import { Section, Avatar } from '@components/Home/Home.styled'
+import { BackgroundBlock, BackgroundImage } from '@components/Home/HomeBackground.styled'
+import Button from '@components/StyledModule/Button.styled'
+
+/* Images */
 import avatar from '@images/avatar.png'
 import homeBackground from '@images/homeBackground.png'
-import Info from '@components/containers/Home/info'
-import SocialMedia from '@components/containers/socialMedia'
-import SocialMediaStyle from '@components/styles/Module/socialMedia'
-import { Section, Avatar } from '@components/styles/Home/home'
-import { BackgroundBlock, BackgroundImage } from '@components/styles/Home/background'
-import Button from '@components/styles/Module/button'
 
 /* Background animation (calculate position) */
 const calculate = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
@@ -46,10 +50,6 @@ const Home = () => {
       <Avatar src={avatar} alt="avatar" />
       <Info />
       <Button primary>聯絡我</Button>
-
-      <SocialMediaStyle>
-        <SocialMedia />
-      </SocialMediaStyle>
       
     </Section>
   )

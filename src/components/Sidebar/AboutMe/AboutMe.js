@@ -1,7 +1,19 @@
-import React, { useEffect, useContext } from 'react'
+import React, { useContext } from 'react'
 import { CatStateContext } from '@utilities/context'
 import { skills } from '@utilities/skillTag'
-import { AboutMeBlock, AvatarMask, Description, JobTitle, Detail, Birth, SkillTag } from '@components/styles/Sidebar/aboutMe'
+
+/* Styles */
+import {
+  AboutMeBlock,
+  AvatarMask,
+  Description,
+  JobTitle,
+  Detail,
+  Birth,
+  SkillTag
+} from './AboutMe.styled'
+
+/* Images */
 import avatar from '@images/avatar.png'
 
 const AboutMe = () => {

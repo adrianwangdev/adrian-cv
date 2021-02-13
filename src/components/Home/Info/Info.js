@@ -1,5 +1,10 @@
 import React from 'react'
-import { InfoBlock, EnglishName, ChineseName, Description } from '@components/styles/Home/info'
+import {
+  InfoBlock,
+  EnglishName,
+  ChineseName,
+  Description
+} from './info.styled'
 
 const Info = () => (
   <InfoBlock>

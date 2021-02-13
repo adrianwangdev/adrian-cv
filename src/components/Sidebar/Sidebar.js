@@ -1,12 +1,16 @@
 import React, { useContext } from 'react'
 import { CatStateContext } from '@utilities/context'
-import AboutMe from './aboutMe'
-import Navbar from './navbar'
-import SocialMedia from '@components/containers/socialMedia'
-import SocialMediaAccount from '@components/containers/Sidebar/socialMediaAccount'
-import { Menu, MenuTitle } from '@components/styles/Sidebar/sidebar'
-import Nav from '@components/styles/Sidebar/navbar'
-import SocialMediaStyle from '@components/styles/Module/socialMedia'
+
+/* Components */
+import AboutMe from './AboutMe/AboutMe'
+import Navbar from './Navbar/Navbar'
+import SocialMediaLink from './SocialMedia/SocialMediaLink'
+import SocialMediaAccount from './SocialMedia/SocialMediaAccount'
+
+/* Styles */
+import { Menu, MenuTitle } from './Sidebar.styled'
+import Nav from './Navbar/Navbar.styled'
+import SocialMediaStyle from './SocialMedia/SocialMediaLink.styled'
 
 const Sidebar = () => {
 
@@ -28,11 +32,8 @@ const Sidebar = () => {
         <Navbar />
       </Nav>
 
-      <SocialMediaStyle
-        inSidebar
-        show={sidebarDetail ? true : false}
-      >
-        <SocialMedia />
+      <SocialMediaStyle>
+        <SocialMediaLink />
         <SocialMediaAccount />
       </SocialMediaStyle>
     </Menu>

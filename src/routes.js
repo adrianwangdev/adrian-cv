@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 import { CatStateContext } from '@utilities/context'
-import GlobalStyle from '@components/styles/globalStyle'
+import GlobalStyle from '@components/globalStyle'
 import LightMode from '@themes/lightMode'
 import DarkMode from '@themes/darkMode'
 

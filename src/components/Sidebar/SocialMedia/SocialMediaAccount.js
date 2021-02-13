@@ -1,5 +1,5 @@
-import React, { useState, useRef } from 'react'
-import SocialMediaAccountBlock from '@components/styles/Sidebar/socialMediaAccount'
+import React, { useRef } from 'react'
+import SocialMediaAccountBlock from './SocialMediaAccount.styled'
 
 const SocialMediaAccount = () => {
 
