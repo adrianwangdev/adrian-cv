@@ -6,7 +6,9 @@ const Row = styled.div`
 `
 
 const Column = styled.div`
+  /* border: 1px solid blue; */
   margin-right: 3.2rem;
+  margin-bottom: 4.8rem;
   width: calc(50% - 1.6rem);
 
   @media (max-width: 1200px) {
@@ -15,12 +17,8 @@ const Column = styled.div`
     width: 100%;
   }
 
-  &:last-child {
+  &:nth-child(even) {
     margin-right: 0;
-
-    @media (max-width: 1200px) {
-      margin-bottom: 0;
-    }
   }
 `
 

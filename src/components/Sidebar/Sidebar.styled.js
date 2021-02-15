@@ -12,13 +12,16 @@ const Menu = styled.aside`
   overflow: hidden;
 `
 
-const MenuTitle = styled.h1`
+const MenuTitle = styled.div`
   font-size: 2.8rem;
   color: ${props =>
     props.onlyName
       ? props.theme.colors.text.textDark
       : props.theme.colors.primary.primaryRegular};
-  transition: all .8s;
+  transition: all .6s;
+  height: ${props => props.hide ? '0' : '3.4rem'};
+  opacity: ${props => props.hide ? '0' : '1'};
+  overflow: hidden;
   
   span {
     color: ${props => props.theme.colors.text.textDark};

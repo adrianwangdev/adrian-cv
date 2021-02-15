@@ -5,10 +5,15 @@ import { skills } from '@utilities/skillTag'
 
 /* Components */
 import SectionTitle from '@components/SectionTitle/SectionTitle'
+import InfoItems from '@components/About/InfoItems/InfoItems'
 
 /* Styles */
-import { AboutSectionWrapper, AboutSkillTag } from '@components/About/About.styled'
+import { SectionWrapper } from '@components/StyledModule/SectionWrapper.styled'
+import { AboutSkillTag, AboutImageWrapper } from '@components/About/About.styled'
 import { Row, Column } from '@components/StyledModule/Grid.styled'
+
+/* Images */
+import AboutPageImage from '@images/about/about.png'
 
 const About = () => {
 
@@ -36,7 +41,7 @@ const About = () => {
   )
 
   return (
-    <AboutSectionWrapper>
+    <SectionWrapper>
       <SectionTitle>
         About
         <span>個人資料</span>
@@ -44,29 +49,10 @@ const About = () => {
 
       <h3>王柔燁 Adrian</h3>
 
-      <Row className="row">
+      <Row>
 
         <Column>
-          <div className="infoItem">
-            <p className="title">年齡</p>
-            <p className="content">26 歲</p>
-          </div>
-          <div className="infoItem">
-            <p className="title">婚姻狀態</p>
-            <p className="content">未婚</p>
-          </div>
-          <div className="infoItem">
-            <p className="title">駕駛執照</p>
-            <p className="content">普通重型機車駕照、普通小型車駕照</p>
-          </div>
-          <div className="infoItem">
-            <p className="title">聯絡電話</p>
-            <p className="content">0910 319 855</p>
-          </div>
-          <div className="infoItem">
-            <p className="title">Email</p>
-            <p className="content">adrianwangdev@gmail.com</p>
-          </div>
+          <InfoItems />
         </Column>
 
         <Column>
@@ -74,12 +60,22 @@ const About = () => {
             {renderSkillTags()}
           </AboutSkillTag>
         </Column>
+
+        <Column>
+          <p>過去從事設計近 3 年，因過去工作接觸到網頁開發，從而發現自己對前端充滿熱忱。能夠獨立完成切版 ( 包含 RWD )、串接 API、了解建構函式 Prototype、Virtual DOM 和 Real DOM 等概念，至今仍持續學習更深入的前端技術，並接觸 Node 和 MongoDB 藉此多了解後端概念與之配合。</p>
+          <br />
+          <p>個性開朗、求知慾旺盛，對細節有偏執的要求。由於設計背景出身，本身對於使用者介面和體驗亦頗為重視，另也熟悉 MacOS 和 Linux Ubuntu 系統。</p>
+          <br />
+          <p>平時喜愛關注新趨勢和學習新技術，工作之餘也持續進修，期待能與未來的夥伴一同精進。</p>
+        </Column>
+
+        <Column>
+          <AboutImageWrapper>
+            <img src={AboutPageImage} alt="about" />
+          </AboutImageWrapper>
+        </Column>
       </Row>
-
-
-      
-
-    </AboutSectionWrapper>
+    </SectionWrapper>
   )
 }
 

@@ -18,13 +18,9 @@ const Sidebar = () => {
   
   return (
     <Menu>
-      {
-        sidebarDetail
-          ? null
-          : <MenuTitle>
-              <p>Adrian<span>’s CV</span></p>
-            </MenuTitle>
-      }
+      <MenuTitle hide={sidebarDetail ? true : false}>
+        <p>Adrian<span>’s CV</span></p>
+      </MenuTitle>
 
       <AboutMe />
       
