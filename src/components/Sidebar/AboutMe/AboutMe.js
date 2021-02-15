@@ -9,9 +9,9 @@ import {
   Description,
   JobTitle,
   Detail,
-  Birth,
-  SkillTag
+  Birth
 } from './AboutMe.styled'
+import { SkillTag } from '@components/StyledModule/SkillTag.styled'
 
 /* Images */
 import avatar from '@images/avatar.png'

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { SectionWrapper } from '../StyledModule/SectionWrapper.styled'
+import { SkillTag } from '../StyledModule/SkillTag.styled'
 
 const AboutSectionWrapper = styled(SectionWrapper)`
   letter-spacing: .1rem;
@@ -8,11 +9,15 @@ const AboutSectionWrapper = styled(SectionWrapper)`
     margin-bottom: 2.4rem;
   }
 
+  p {
+    font-family: 'Noto Sans TC', 'Microsoft JhengHei', '微軟正黑體', sans-serif;
+    font-weight: 400;
+    letter-spacing: .1rem;
+  }
+
   .infoItem {
     display: flex;
     margin-bottom: .8rem;
-    font-family: 'Noto Sans TC', 'Microsoft JhengHei', '微軟正黑體', sans-serif;
-    /* letter-spacing: .1rem; */
     
     .title {
       margin-right: 1.6rem;
@@ -20,36 +25,21 @@ const AboutSectionWrapper = styled(SectionWrapper)`
       color: ${props => props.theme.colors.primary.primaryRegular};
     }
   }
+`
 
-  .container {
-    /* padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    width: 100%; */
-  }
+const AboutSkillTag = styled(SkillTag)`
+  > p {
+    margin-right: 1.6rem;
+    margin-bottom: 1.6rem;
+    background: ${props => props.theme.colors.background.backgroundLight};
 
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    /* margin-right: -15px;
-    margin-left: -15px; */
-  }
-
-  .column {
-    flex-basis: 0;
-    flex-grow: 1;
-    max-width: 100%;
-    margin-right: 3.2rem;
-
-    &:last-child {
-      margin-right: 0;
+    &.familiar {
+    background: ${props => props.theme.colors.primary.primaryLightest};
     }
   }
 `
 
-/* Create 2 column grid */
-
 export {
-  AboutSectionWrapper
+  AboutSectionWrapper,
+  AboutSkillTag
 }

@@ -17,7 +17,8 @@ const theme = {
     },
     background: {
       backgroundDefault: '#fff',
-      backgroundSpecial: '#f9f9ff'
+      backgroundSpecial: '#f9f9ff',
+      backgroundLight: '#f2f2f2'
     },
     sidebarBorder: '#E0E0E0'
   }
