@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 const AboutMeBlock = styled.div`
+  margin-top: ${props => props.show ? '-2.4rem': '0'};
   opacity: ${props => props.show ? '1' : '0'};
   transition: all .4s;
 
