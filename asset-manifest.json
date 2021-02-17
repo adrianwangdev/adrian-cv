@@ -1,27 +1,32 @@
 {
   "files": {
-    "main.js": "/adrian-cv/static/js/main.999c2f1d.chunk.js",
-    "main.js.map": "/adrian-cv/static/js/main.999c2f1d.chunk.js.map",
+    "main.js": "/adrian-cv/static/js/main.6ee3182a.chunk.js",
+    "main.js.map": "/adrian-cv/static/js/main.6ee3182a.chunk.js.map",
     "runtime-main.js": "/adrian-cv/static/js/runtime-main.4e4a2662.js",
     "runtime-main.js.map": "/adrian-cv/static/js/runtime-main.4e4a2662.js.map",
-    "static/js/2.38483e20.chunk.js": "/adrian-cv/static/js/2.38483e20.chunk.js",
-    "static/js/2.38483e20.chunk.js.map": "/adrian-cv/static/js/2.38483e20.chunk.js.map",
+    "static/js/2.3fcf3371.chunk.js": "/adrian-cv/static/js/2.3fcf3371.chunk.js",
+    "static/js/2.3fcf3371.chunk.js.map": "/adrian-cv/static/js/2.3fcf3371.chunk.js.map",
     "index.html": "/adrian-cv/index.html",
-    "static/js/2.38483e20.chunk.js.LICENSE.txt": "/adrian-cv/static/js/2.38483e20.chunk.js.LICENSE.txt",
+    "static/js/2.3fcf3371.chunk.js.LICENSE.txt": "/adrian-cv/static/js/2.3fcf3371.chunk.js.LICENSE.txt",
     "static/media/about.c58d502a.svg": "/adrian-cv/static/media/about.c58d502a.svg",
+    "static/media/about.f995549c.png": "/adrian-cv/static/media/about.f995549c.png",
     "static/media/avatar.3cefcb06.png": "/adrian-cv/static/media/avatar.3cefcb06.png",
     "static/media/contact.38c49de0.svg": "/adrian-cv/static/media/contact.38c49de0.svg",
+    "static/media/dots.5491f611.svg": "/adrian-cv/static/media/dots.5491f611.svg",
+    "static/media/education.80556ccd.svg": "/adrian-cv/static/media/education.80556ccd.svg",
     "static/media/github.7373d409.svg": "/adrian-cv/static/media/github.7373d409.svg",
     "static/media/home.f117ddb5.svg": "/adrian-cv/static/media/home.f117ddb5.svg",
     "static/media/homeBackground.77c92bce.png": "/adrian-cv/static/media/homeBackground.77c92bce.png",
     "static/media/instagram.06858b01.svg": "/adrian-cv/static/media/instagram.06858b01.svg",
     "static/media/medium.a0bcb27c.svg": "/adrian-cv/static/media/medium.a0bcb27c.svg",
+    "static/media/menu.d4719187.svg": "/adrian-cv/static/media/menu.d4719187.svg",
     "static/media/project.0ee11b32.svg": "/adrian-cv/static/media/project.0ee11b32.svg",
+    "static/media/work.6f6f7d5d.svg": "/adrian-cv/static/media/work.6f6f7d5d.svg",
     "static/media/work.756f301b.svg": "/adrian-cv/static/media/work.756f301b.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.4e4a2662.js",
-    "static/js/2.38483e20.chunk.js",
-    "static/js/main.999c2f1d.chunk.js"
+    "static/js/2.3fcf3371.chunk.js",
+    "static/js/main.6ee3182a.chunk.js"
   ]
 }
