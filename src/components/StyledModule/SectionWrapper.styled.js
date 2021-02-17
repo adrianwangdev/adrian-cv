@@ -10,6 +10,10 @@ const SectionWrapper = styled.section`
     props.Special && props.theme.colors.background.backgroundSpecial
   };
 
+  @media (max-width: 576px) {
+    padding: 2.4rem;
+  }
+
   h3 {
     margin-bottom: 2.4rem;
     font-weight: 400;

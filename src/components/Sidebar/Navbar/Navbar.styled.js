@@ -8,6 +8,13 @@ const Nav = styled.nav`
     props.moveDown ? 'translateY(-8%)' : 'translateY(-64%)'
   };
 
+  @media (max-width: 576px) {
+    transform: ${props =>
+      props.moveDown ? 'translateY(8%)' : 'translateY(-64%)'
+    };
+  }
+
+
   ul {
     list-style: none;
   }

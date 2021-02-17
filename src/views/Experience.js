@@ -1,5 +1,5 @@
-import React, { useEffect, useContext } from 'react'
-import { useLocation } from 'react-router-dom'
+import React, { useContext } from 'react'
+import { usePageLocation, useMenu } from '../utilities/useHooks'
 import { CatStateContext } from '@utilities/context'
 
 /* Components */
@@ -9,32 +9,38 @@ import Card from '../components/Experience/Card/Card'
 /* Styles */
 import { SectionWrapper } from '@components/StyledModule/SectionWrapper.styled'
 import { Row, Column } from '@components/StyledModule/Grid.styled'
-import { Category, Cards } from '@components/Experience/Experience.styled'
+import { Category, Cards, EducationColumn } from '@components/Experience/Experience.styled'
+import { MenuButton } from '@components/StyledModule/MenuButton.styled' 
 
-/* Svg Icons */
+/* Images */
 import { ReactComponent as EducationIcon } from '@images/experience/education.svg'
 import { ReactComponent as WorkIcon } from '@images/experience/work.svg'
+import { ReactComponent as MenuIcon } from '@images/nav/menu.svg'
 
 const Experience = () => {
 
-  const location = useLocation()
-  const { setSidebarDetail } = useContext(CatStateContext)
+  usePageLocation()
+  useMenu()
 
-  useEffect(() => {
-    location.pathname === '/'
-      ? setSidebarDetail(false)
-      : setSidebarDetail(true)
-  }, [])
+  const { isMenuOpen, setIsMenuOpen } = useContext(CatStateContext)
 
   return (
     <SectionWrapper Special>
+
+      <MenuButton
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        isMenuOpen={isMenuOpen && true}
+      >
+        <MenuIcon />
+      </MenuButton>
+      
       <SectionTitle>
         Experience
         <span>個人閱歷</span>
       </SectionTitle>
       <Row>
 
-        <Column>
+        <EducationColumn>
           <Category>
             <EducationIcon />
             <h3>教育程度</h3>
@@ -44,7 +50,7 @@ const Experience = () => {
           <Cards>
             <Card category='education' />
           </Cards>
-        </Column>
+        </EducationColumn>
 
         <Column>
           <Category>

@@ -1,7 +1,7 @@
-import React, { useEffect, useContext } from 'react'
-import { useLocation } from 'react-router-dom'
+import React, { useContext } from 'react'
 import { useSpring } from 'react-spring'
 import { CatStateContext } from '@utilities/context'
+import { usePageLocation, useMenu } from '@utilities/useHooks'
 
 /* Components */
 import Info from '@components/Home/Info/Info'
@@ -10,10 +10,12 @@ import Info from '@components/Home/Info/Info'
 import { Section, Avatar } from '@components/Home/Home.styled'
 import { BackgroundBlock, BackgroundImage } from '@components/Home/HomeBackground.styled'
 import Button from '@components/StyledModule/Button.styled'
+import { MenuButton } from '@components/StyledModule/MenuButton.styled' 
 
 /* Images */
 import avatar from '@images/avatar.png'
 import homeBackground from '@images/homeBackground.png'
+import { ReactComponent as MenuIcon } from '@images/nav/menu.svg'
 
 /* Background animation (calculate position) */
 const calculate = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
@@ -27,17 +29,21 @@ const Home = () => {
     config: { mass: 10, tension: 550, friction: 140 }
   }))
 
-  const location = useLocation()
-  const { setSidebarDetail } = useContext(CatStateContext)
+  usePageLocation()
+  useMenu()
+
+  const { isMenuOpen, setIsMenuOpen } = useContext(CatStateContext)
   
-  useEffect(() => {
-    location.pathname === '/'
-      ? setSidebarDetail(false)
-      : setSidebarDetail(true)
-  }, [])
+  const openMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
 
   return (
     <Section>
+
+      <MenuButton onClick={openMenu} isMenuOpen={isMenuOpen && true}>
+        <MenuIcon />
+      </MenuButton>
 
       <BackgroundBlock onMouseMove={({clientX: x, clientY: y}) => setAnimated({xy: calculate(x, y)})}>
         <BackgroundImage

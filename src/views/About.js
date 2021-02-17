@@ -1,7 +1,7 @@
-import React, { useEffect, useContext } from 'react'
-import { useLocation } from 'react-router-dom'
-import { CatStateContext } from '@utilities/context'
+import React, { useContext } from 'react'
+import { usePageLocation, useMenu } from '@utilities/useHooks'
 import { skills } from '@utilities/skillTag'
+import { CatStateContext } from '@utilities/context'
 
 /* Components */
 import SectionTitle from '@components/SectionTitle/SectionTitle'
@@ -11,24 +11,22 @@ import InfoItems from '@components/About/InfoItems/InfoItems'
 import { SectionWrapper } from '@components/StyledModule/SectionWrapper.styled'
 import { AboutSkillTag, AboutImageWrapper } from '@components/About/About.styled'
 import { Row, Column } from '@components/StyledModule/Grid.styled'
+import { MenuButton } from '@components/StyledModule/MenuButton.styled' 
 
 /* Images */
 import AboutPageImage from '@images/about/about.png'
+import { ReactComponent as MenuIcon } from '@images/nav/menu.svg'
 
 const About = () => {
 
-  const location = useLocation()
-  const { setSidebarDetail } = useContext(CatStateContext)
-
-  useEffect(() => {
-    location.pathname === '/'
-      ? setSidebarDetail(false)
-      : setSidebarDetail(true)
-  }, [])
-
-  const skillTagsElement = (item, index, className = '') => {
-    return <p key={index} className={className}>{item.name}</p>
-  }
+  usePageLocation()
+  useMenu()
+  
+  const { isMenuOpen, setIsMenuOpen } = useContext(CatStateContext)
+  
+  const skillTagsElement = (item, index, className = '') => (
+    <p key={index} className={className}>{item.name}</p>
+  )
 
   const renderSkillTags = () => (
     skills.map((item, index) => {
@@ -42,6 +40,14 @@ const About = () => {
 
   return (
     <SectionWrapper>
+
+      <MenuButton
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        isMenuOpen={isMenuOpen && true}
+      >
+        <MenuIcon />
+      </MenuButton>
+
       <SectionTitle>
         About
         <span>個人資料</span>

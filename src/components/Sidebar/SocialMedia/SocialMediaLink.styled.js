@@ -4,6 +4,10 @@ const SocialMediaStyle = styled.div`
   margin-top: -4rem;
   margin-left: -.6rem;
   margin-bottom: -2rem;
+  
+  @media (max-width: 576px) {
+    display: none;
+  }
 
   a {
     display: inline-block;

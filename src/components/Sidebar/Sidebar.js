@@ -14,10 +14,10 @@ import SocialMediaStyle from './SocialMedia/SocialMediaLink.styled'
 
 const Sidebar = () => {
 
-  const { sidebarDetail } = useContext(CatStateContext)
+  const { sidebarDetail, isMenuOpen } = useContext(CatStateContext)
   
   return (
-    <Menu>
+    <Menu isMenuOpen={isMenuOpen && true}>
       <MenuTitle hide={sidebarDetail ? true : false}>
         <p>Adrian<span>’s CV</span></p>
       </MenuTitle>

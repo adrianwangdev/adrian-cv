@@ -6,16 +6,39 @@ const SectionTitleStyled = styled.div`
   margin-bottom: 4rem;
   animation: fadeInDown .6s;
 
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: flex-end;
+  }
+  @media (max-width: 576px) {
+    text-align: right;
+    font-size: 1.8rem;
+  }
+
   img {
     position: absolute;
     bottom: -.8rem;
     right: -2.4rem;
+    @media (max-width: 576px) {
+      right: -1.2rem;
+    }
+  }
+
+  h2 {
+    @media (max-width: 576px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   span {
     display: inline-block;
     margin-left: 1.6rem;
     font-weight: 400;
+
+    @media (max-width: 576px) {
+      font-size: 2.2rem;
+    }
   }
 
   @keyframes fadeInDown {

@@ -33,7 +33,9 @@ const SocialMediaAccountBlock = styled.div`
     display: none;
     position: absolute;
     top: -100%;
-    right: -12%;
+    /* right: -12%; */
+    left: 72%;
+    width: 40%;
     padding: .2rem .4rem;
     border-radius: .4rem;
     font-family: 'Noto Sans TC', 'Microsoft JhengHei', '微軟正黑體', sans-serif;

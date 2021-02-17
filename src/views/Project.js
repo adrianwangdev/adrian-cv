@@ -1,19 +1,41 @@
-import React, { useEffect, useContext } from 'react'
-import { useLocation } from 'react-router-dom'
+import React, { useContext } from 'react'
+import { usePageLocation, useMenu } from '../utilities/useHooks'
 import { CatStateContext } from '@utilities/context'
+
+/* Components */
+import SectionTitle from '@components/SectionTitle/SectionTitle'
+
+/* Styles */
+import { SectionWrapper } from '@components/StyledModule/SectionWrapper.styled'
+import { MenuButton } from '@components/StyledModule/MenuButton.styled'
+
+/* Images */
+import { ReactComponent as MenuIcon } from '@images/nav/menu.svg'
 
 const Project = () => {
 
-  const location = useLocation()
-  const { setSidebarDetail } = useContext(CatStateContext)
+  usePageLocation()
+  useMenu()
 
-  useEffect(() => {
-    location.pathname === '/'
-      ? setSidebarDetail(false)
-      : setSidebarDetail(true)
-  }, [])
+  const { isMenuOpen, setIsMenuOpen } = useContext(CatStateContext)
 
-  return <h1>Project</h1>
+  return (
+    <SectionWrapper Special>
+
+      <MenuButton
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        isMenuOpen={isMenuOpen && true}
+      >
+        <MenuIcon />
+      </MenuButton>
+
+      <SectionTitle>
+        Project
+        <span>專案項目</span>
+      </SectionTitle>
+      
+    </SectionWrapper>
+  )
 }
 
 export default Project

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Column } from '../StyledModule/Grid.styled'
 
 const Category = styled.div`
   display: flex;
@@ -23,7 +24,14 @@ const Cards = styled.div`
   flex-direction: column;
 `
 
+const EducationColumn = styled(Column)`
+  @media (max-width: 1200px) {
+    order: 2;
+  }
+`
+
 export {
   Category,
-  Cards
+  Cards,
+  EducationColumn
 }

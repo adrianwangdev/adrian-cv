@@ -5,6 +5,10 @@ const AboutMeBlock = styled.div`
   opacity: ${props => props.show ? '1' : '0'};
   transition: all .4s;
 
+  @media (max-width: 576px) {
+    margin-top: ${props => props.show ? '2rem' : '0'};
+  }
+
   p, a {
     font-family: 'Noto Sans TC', 'Microsoft JhengHei', '微軟正黑體', sans-serif;
     font-weight: 400;
@@ -28,6 +32,11 @@ const Description = styled.div`
   margin-top: 1.2rem;
   margin-bottom: 1.2rem;
 
+  @media (max-width: 576px) {
+    margin-top: .8rem;
+    margin-bottom: .8rem;
+  }
+
   p, a {
     font-size: 1.4rem;
     line-height: 1.8;
@@ -42,10 +51,20 @@ const JobTitle = styled.div`
   h3 {
     margin-right: 1.6rem;
     font-size: 2.4rem;
+
+    @media (max-width: 576px) {
+      margin-right: 1.2rem;
+      font-size: 2rem;
+    }
   }
+
   p {
     font-size: 1.6rem;
     color: ${props => props.theme.colors.text.textLight};
+
+    @media (max-width: 576px) {
+      font-size: 1.4rem;
+    }
   }
 `
 
@@ -65,6 +84,10 @@ const Birth = styled.div`
 
   p {
     margin-right: 1.6rem;
+
+    @media (max-width: 576px) {
+      margin-right: 1.2rem;
+    }
   }
 
   > p:last-child {
