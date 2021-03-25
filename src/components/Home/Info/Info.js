@@ -10,7 +10,7 @@ const Info = () => (
   <InfoBlock>
     <EnglishName>Adrian</EnglishName>
     <ChineseName>王柔燁</ChineseName>
-    <Description>一句話簡短介紹一下自己</Description>
+    <Description>一位熱愛關注新趨勢的宅宅工程師</Description>
   </InfoBlock>
 )
 
