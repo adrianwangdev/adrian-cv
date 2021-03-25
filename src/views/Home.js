@@ -7,9 +7,8 @@ import { usePageLocation, useMenu } from '@utilities/useHooks'
 import Info from '@components/Home/Info/Info'
 
 /* Styles */
-import { Section, Avatar } from '@components/Home/Home.styled'
+import { Section, Avatar, LinkButton } from '@components/Home/Home.styled'
 import { BackgroundBlock, BackgroundImage } from '@components/Home/HomeBackground.styled'
-import Button from '@components/StyledModule/Button.styled'
 import { MenuButton } from '@components/StyledModule/MenuButton.styled' 
 
 /* Images */
@@ -55,8 +54,7 @@ const Home = () => {
 
       <Avatar src={avatar} alt="avatar" />
       <Info />
-      <Button primary>聯絡我</Button>
-      
+      <LinkButton to='/contact'>聯絡我</LinkButton>
     </Section>
   )
 }
