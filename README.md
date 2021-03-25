@@ -2,6 +2,8 @@
 
 It's my CV website.
 
+You can clone the project or [preview the website on the link](https://adrianwangdev.github.io/adrian-cv/). (github-pages)
+
 
 ### Install
 
