@@ -6,7 +6,7 @@ const skills = [
   { name: 'React', familiar: true, onSidebar: true },
   { name: 'React Hooks', familiar: true, onSidebar: false },
   { name: 'React Router', familiar: true, onSidebar: false },
-  { name: 'Redux', familiar: true, onSidebar: false },
+  { name: 'Redux', familiar: true, onSidebar: true },
   { name: 'Styled-Components', familiar: true, onSidebar: false },
   { name: 'Bootstrap', familiar: true, onSidebar: false },
   { name: 'Promise', familiar: true, onSidebar: false },
