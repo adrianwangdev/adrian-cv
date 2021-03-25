@@ -6,10 +6,18 @@ const Row = styled.div`
 `
 
 const Column = styled.div`
-  /* border: 1px solid blue; */
-  margin-right: 3.2rem;
   margin-bottom: 4.8rem;
-  width: calc(50% - 1.6rem);
+  ${
+  props => props.$fullWidth
+    ? (`
+      margin-right: 0;
+      width: 100%;
+      `)
+    : (`
+      margin-right: 3.2rem;
+      width: calc(50% - 1.6rem);
+      `)
+  };
 
   @media (max-width: 1200px) {
     margin-right: 0;
