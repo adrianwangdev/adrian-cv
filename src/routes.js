@@ -20,23 +20,13 @@ const Routes = () => {
 
   const [lightTheme, setLightTheme] = useState(true)
   const [sidebarDetail, setSidebarDetail] = useState(false)
-  const [windowHeight, setWindowHeight] = useState(0)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-  const getWindowHeight = () => {
-    setWindowHeight(window.innerHeight)
-    console.log(windowHeight)
-  }
-
-  const openMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
 
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <ThemeProvider theme={lightTheme ? LightMode : DarkMode}>
         <CatStateContext.Provider
-          value={{ sidebarDetail, setSidebarDetail, isMenuOpen, setIsMenuOpen }}
+          value={{ sidebarDetail, setSidebarDetail, isMenuOpen, lightTheme, setIsMenuOpen, setLightTheme }}
         >
           <MainLayout context={CatStateContext}>
             <Switch>
