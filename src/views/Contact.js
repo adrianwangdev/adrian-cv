@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
-import { usePageLocation, useMenu } from '../utilities/useHooks'
 import { CatStateContext } from '@utilities/context'
+import { usePageLocation, useMenu } from '@utilities/useHooks'
+
 
 /* Components */
 import SectionTitle from '@components/SectionTitle/SectionTitle'
@@ -10,6 +11,7 @@ import { SectionWrapper } from '@components/StyledModule/SectionWrapper.styled'
 import { Row, Column } from '@components/StyledModule/Grid.styled'
 import { MenuButton } from '@components/StyledModule/MenuButton.styled'
 import { Card, TextContent } from '@components/Contact/Contact.styled'
+import { SwitchThemeButton } from '@components/StyledModule/SwitchThemeButton.styled'
 
 /* Images */
 import { ReactComponent as MenuIcon } from '@images/nav/menu.svg'
@@ -21,15 +23,20 @@ const Contact = () => {
   usePageLocation()
   useMenu()
 
-  const { isMenuOpen, setIsMenuOpen } = useContext(CatStateContext)
+  const { isMenuOpen, setIsMenuOpen, lightTheme, setLightTheme } = useContext(CatStateContext)
+
+  const openMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  const setTheme = () => {
+    setLightTheme(!lightTheme)
+  }
 
   return (
     <SectionWrapper>
 
-      <MenuButton
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-        isMenuOpen={isMenuOpen && true}
-      >
+      <MenuButton onClick={openMenu} isMenuOpen={isMenuOpen && true}>
         <MenuIcon />
       </MenuButton>
 
@@ -57,6 +64,12 @@ const Contact = () => {
         </Column>
       </Row>
 
+      <SwitchThemeButton>
+        <label>
+          <input type="checkbox" value="ON" onClick={setTheme}/>
+          <span>Theme</span>
+        </label>
+      </SwitchThemeButton>
     </SectionWrapper>
   )
 }

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import { usePageLocation, useMenu } from '../utilities/useHooks'
 import { CatStateContext } from '@utilities/context'
+import { usePageLocation, useMenu } from '@utilities/useHooks'
 
 /* Components */
 import SectionTitle from '@components/SectionTitle/SectionTitle'
@@ -9,8 +9,9 @@ import Card from '../components/Experience/Card/Card'
 /* Styles */
 import { SectionWrapper } from '@components/StyledModule/SectionWrapper.styled'
 import { Row, Column } from '@components/StyledModule/Grid.styled'
-import { Category, Cards, EducationColumn } from '@components/Experience/Experience.styled'
-import { MenuButton } from '@components/StyledModule/MenuButton.styled' 
+import { PageWrapper, Category, Cards, EducationColumn } from '@components/Experience/Experience.styled'
+import { MenuButton } from '@components/StyledModule/MenuButton.styled'
+import { SwitchThemeButton } from '@components/StyledModule/SwitchThemeButton.styled'
 
 /* Images */
 import { ReactComponent as EducationIcon } from '@images/experience/education.svg'
@@ -22,15 +23,20 @@ const Experience = () => {
   usePageLocation()
   useMenu()
 
-  const { isMenuOpen, setIsMenuOpen } = useContext(CatStateContext)
+  const { isMenuOpen, setIsMenuOpen, lightTheme, setLightTheme } = useContext(CatStateContext)
+
+  const openMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  const setTheme = () => {
+    setLightTheme(!lightTheme)
+  }
 
   return (
     <SectionWrapper Special>
 
-      <MenuButton
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-        isMenuOpen={isMenuOpen && true}
-      >
+      <MenuButton onClick={openMenu} isMenuOpen={isMenuOpen && true}>
         <MenuIcon />
       </MenuButton>
       
@@ -38,33 +44,42 @@ const Experience = () => {
         Experience
         <span>個人閱歷</span>
       </SectionTitle>
-      <Row>
+      <PageWrapper>
+        <Row>
 
-        <EducationColumn>
-          <Category>
-            <EducationIcon />
-            <h3>教育程度</h3>
-            <p>大學畢業</p>
-          </Category>
-          
-          <Cards>
-            <Card category='education' />
-          </Cards>
-        </EducationColumn>
+          <EducationColumn>
+            <Category>
+              <EducationIcon />
+              <h3>教育程度</h3>
+              <p>大學畢業</p>
+            </Category>
 
-        <Column>
-          <Category>
-            <WorkIcon />
-            <h3>工作經歷</h3>
-            <p>2 ~ 3 年</p>
-          </Category>
+            <Cards>
+              <Card category='education' />
+            </Cards>
+          </EducationColumn>
 
-          <Cards>
-            <Card category='work' />
-          </Cards>
-        </Column>
+          <Column>
+            <Category>
+              <WorkIcon />
+              <h3>工作經歷</h3>
+              <p>2 ~ 3 年</p>
+            </Category>
 
-      </Row>
+            <Cards>
+              <Card category='work' />
+            </Cards>
+          </Column>
+
+        </Row>
+      </PageWrapper>
+
+      <SwitchThemeButton>
+        <label>
+          <input type="checkbox" value="ON" onClick={setTheme}/>
+          <span>Theme</span>
+        </label>
+      </SwitchThemeButton>
     </SectionWrapper>
   )
 }

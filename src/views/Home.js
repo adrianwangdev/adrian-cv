@@ -9,7 +9,8 @@ import Info from '@components/Home/Info/Info'
 /* Styles */
 import { Section, Avatar, LinkButton } from '@components/Home/Home.styled'
 import { BackgroundBlock, BackgroundImage } from '@components/Home/HomeBackground.styled'
-import { MenuButton } from '@components/StyledModule/MenuButton.styled' 
+import { MenuButton } from '@components/StyledModule/MenuButton.styled'
+import { SwitchThemeButton } from '@components/StyledModule/SwitchThemeButton.styled'
 
 /* Images */
 import avatar from '@images/avatar.png'
@@ -31,10 +32,14 @@ const Home = () => {
   usePageLocation()
   useMenu()
 
-  const { isMenuOpen, setIsMenuOpen } = useContext(CatStateContext)
+  const { isMenuOpen, setIsMenuOpen, lightTheme, setLightTheme } = useContext(CatStateContext)
   
   const openMenu = () => {
     setIsMenuOpen(!isMenuOpen)
+  }
+
+  const setTheme = () => {
+    setLightTheme(!lightTheme)
   }
 
   return (
@@ -55,6 +60,13 @@ const Home = () => {
       <Avatar src={avatar} alt="avatar" />
       <Info />
       <LinkButton to='/contact'>聯絡我</LinkButton>
+
+      <SwitchThemeButton>
+        <label>
+          <input type="checkbox" value="ON" onClick={setTheme}/>
+          <span>Theme</span>
+        </label>
+      </SwitchThemeButton>
     </Section>
   )
 }

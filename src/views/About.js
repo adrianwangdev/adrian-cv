@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
+import { CatStateContext } from '@utilities/context'
 import { usePageLocation, useMenu } from '@utilities/useHooks'
 import { skills } from '@utilities/skillTag'
-import { CatStateContext } from '@utilities/context'
 
 /* Components */
 import SectionTitle from '@components/SectionTitle/SectionTitle'
@@ -11,19 +11,28 @@ import InfoItems from '@components/About/InfoItems/InfoItems'
 import { SectionWrapper } from '@components/StyledModule/SectionWrapper.styled'
 import { AboutSkillTag, AboutImageWrapper } from '@components/About/About.styled'
 import { Row, Column } from '@components/StyledModule/Grid.styled'
-import { MenuButton } from '@components/StyledModule/MenuButton.styled' 
+import { MenuButton } from '@components/StyledModule/MenuButton.styled'
+import { SwitchThemeButton } from '@components/StyledModule/SwitchThemeButton.styled'
 
 /* Images */
-import AboutPageImage from '@images/about/about.png'
+import AboutPageImage from '@images/about/about.svg'
 import { ReactComponent as MenuIcon } from '@images/nav/menu.svg'
 
 const About = () => {
 
   usePageLocation()
   useMenu()
-  
-  const { isMenuOpen, setIsMenuOpen } = useContext(CatStateContext)
-  
+
+  const { isMenuOpen, setIsMenuOpen, lightTheme, setLightTheme } = useContext(CatStateContext)
+
+  const openMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  const setTheme = () => {
+    setLightTheme(!lightTheme)
+  }
+
   const skillTagsElement = (item, index, className = '') => (
     <p key={index} className={className}>{item.name}</p>
   )
@@ -41,10 +50,7 @@ const About = () => {
   return (
     <SectionWrapper>
 
-      <MenuButton
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-        isMenuOpen={isMenuOpen && true}
-      >
+      <MenuButton onClick={openMenu}  isMenuOpen={isMenuOpen && true}>
         <MenuIcon />
       </MenuButton>
 
@@ -68,7 +74,7 @@ const About = () => {
         </Column>
 
         <Column>
-          <p>過去從事設計近 3 年，因過去工作接觸到網頁開發，從而發現自己對前端充滿熱忱。能夠獨立完成切版、串接 API、了解建構函式 Prototype、Virtual DOM 和 Real DOM 等概念，至今仍持續學習更深入的前端技術，擅長使用的技術為 React ( with Hooks ) 搭配 Styled-Components / SCSS，並接觸 Node 和 MongoDB 藉此多了解後端概念與之配合。</p>
+          <p>過去從事設計近 3 年，因過去工作接觸到網頁開發，從而發現自己對前端充滿熱忱。能夠獨立完成切版、串接 API、了解建構函式 Prototype、Virtual DOM 和 Real DOM 等概念。擅長使用的技術為 React ( with Hooks ) 搭配 Styled-Components / SCSS，至今仍持續學習更深入的前端技術，並接觸 Node 和 MongoDB 藉此多了解後端概念與之配合。</p>
           <br />
           <p>個性開朗、求知慾旺盛，對細節有偏執的要求。由於設計背景出身，本身對於使用者介面和體驗亦頗為重視，另也熟悉 MacOS 和 Linux Ubuntu 系統。</p>
           <br />
@@ -81,6 +87,13 @@ const About = () => {
           </AboutImageWrapper>
         </Column>
       </Row>
+
+      <SwitchThemeButton>
+        <label>
+          <input type="checkbox" value="ON" onClick={setTheme}/>
+          <span>Theme</span>
+        </label>
+      </SwitchThemeButton>
     </SectionWrapper>
   )
 }
