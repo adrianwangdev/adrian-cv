@@ -27,9 +27,3 @@ export const useMenu = () => {
 
   useEffect(closeMenu, [location])
 }
-
-export const useMenuOpen = () => {
-  const { isMenuOpen, setIsMenuOpen } = useContext(CatStateContext)
-
-  // return setIsMenuOpen(!isMenuOpen)
-}
