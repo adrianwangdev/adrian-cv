@@ -68,7 +68,7 @@ const About = () => {
         </Column>
 
         <Column>
-          <p>過去從事設計近 3 年，因過去工作接觸到網頁開發，從而發現自己對前端充滿熱忱。能夠獨立完成切版 ( 包含 RWD )、串接 API、了解建構函式 Prototype、Virtual DOM 和 Real DOM 等概念，至今仍持續學習更深入的前端技術，並接觸 Node 和 MongoDB 藉此多了解後端概念與之配合。</p>
+          <p>過去從事設計近 3 年，因過去工作接觸到網頁開發，從而發現自己對前端充滿熱忱。能夠獨立完成切版、串接 API、了解建構函式 Prototype、Virtual DOM 和 Real DOM 等概念，至今仍持續學習更深入的前端技術，擅長使用的技術為 React ( with Hooks ) 搭配 Styled-Components / SCSS，並接觸 Node 和 MongoDB 藉此多了解後端概念與之配合。</p>
           <br />
           <p>個性開朗、求知慾旺盛，對細節有偏執的要求。由於設計背景出身，本身對於使用者介面和體驗亦頗為重視，另也熟悉 MacOS 和 Linux Ubuntu 系統。</p>
           <br />
