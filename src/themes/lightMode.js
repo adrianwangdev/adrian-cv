@@ -15,10 +15,13 @@ const theme = {
       textMoreLight: '#999',
       textLightest: '#AAAAAA'
     },
+    basic: {
+      white: '#FFF'
+    },
     background: {
-      backgroundDefault: '#fff',
-      backgroundSpecial: '#f9f9ff',
-      backgroundLight: '#f2f2f2'
+      backgroundDefault: '#FFF',
+      backgroundSpecial: '#F9F9FF',
+      backgroundLight: '#F2F2F2'
     },
     sidebarBorder: '#E0E0E0'
   }

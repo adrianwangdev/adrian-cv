@@ -21,7 +21,7 @@ const theme = {
     background: {
       backgroundDefault: '#1C2123',
       backgroundSpecial: '#3C3E3E',
-      backgroundLight: '#f2f2f2'
+      backgroundLight: '#F2F2F2'
     },
     sidebarBorder: '#404446'
   }
