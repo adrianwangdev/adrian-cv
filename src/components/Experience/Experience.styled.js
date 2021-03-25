@@ -8,7 +8,6 @@ const Category = styled.div`
 
   h3 {
     margin: -.4rem 1.2rem 0 1.2rem;
-    margin-bottom: 0;
     font-weight: 500;
     color: ${props => props.theme.colors.primary.primaryRegular};
   }
