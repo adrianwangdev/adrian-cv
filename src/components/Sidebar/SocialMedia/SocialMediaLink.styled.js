@@ -23,6 +23,12 @@ const SocialMediaStyle = styled.div`
       transform: translateY(-.8rem);
     }
   }
+
+  svg path {
+    fill: ${props => props.theme.name === 'darkMode' && `
+     ${props.theme.colors.text.textDark};
+    `}
+  }
 `
 
 export default SocialMediaStyle

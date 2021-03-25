@@ -11,7 +11,7 @@ const SkillTag = styled.div`
     padding: .4rem 1.2rem;
     border-radius: 1.6rem;
     font-size: 1.4rem;
-    color: ${props => props.theme.colors.text.textLight};
+    color: ${props => props.theme.colors.text.textRegular};
     background: ${props => props.theme.colors.primary.primaryLightest}
   }
 `

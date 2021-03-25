@@ -13,11 +13,11 @@ const Nav = styled.nav`
       props.moveDown ? 'translateY(8%)' : 'translateY(-64%)'
     };
   }
-
-
+  
   ul {
     list-style: none;
   }
+  
   a {
     display: inline-flex;
     align-items: center;
@@ -29,6 +29,12 @@ const Nav = styled.nav`
 
     svg {
       margin-right: 2.4rem;
+      
+      path {
+        stroke: ${props => props.theme.name === 'darkMode' && `
+          ${props.theme.colors.text.textDark};
+        `}
+      }
     }
 
     &:hover,

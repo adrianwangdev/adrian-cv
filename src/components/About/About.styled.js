@@ -8,7 +8,7 @@ const AboutSkillTag = styled(SkillTag)`
     background: ${props => props.theme.colors.background.backgroundLight};
 
     &.familiar {
-    background: ${props => props.theme.colors.primary.primaryLightest};
+      background: ${props => props.theme.colors.primary.primaryLightest};
     }
   }
 `
@@ -16,6 +16,7 @@ const AboutSkillTag = styled(SkillTag)`
 const AboutImageWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
+  margin-top: 4rem;
 
   img {
     width: 88%;

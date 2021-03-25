@@ -4,7 +4,7 @@ const CardWrapper = styled.div`
   margin-bottom: 2.4rem;
   padding: 1.6rem 2.4rem;
   border-radius: 1.6rem;
-  background: white;
+  background: ${props => props.theme.colors.basic.white};
   box-shadow: 0 .4rem 4rem rgba(0, 0, 0, .08);
 
   &:last-child {

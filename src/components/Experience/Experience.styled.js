@@ -1,6 +1,14 @@
 import styled from 'styled-components'
 import { Column } from '../StyledModule/Grid.styled'
 
+const PageWrapper = styled.div`
+  svg path {
+    fill: ${props => props.theme.name === 'darkMode' && `
+     ${props.theme.colors.primary.primaryRegular};
+    `}
+  }
+`
+
 const Category = styled.div`
   display: flex;
   align-items: center;
@@ -30,6 +38,7 @@ const EducationColumn = styled(Column)`
 `
 
 export {
+  PageWrapper,
   Category,
   Cards,
   EducationColumn
