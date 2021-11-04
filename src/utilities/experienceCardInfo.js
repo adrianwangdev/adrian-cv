@@ -21,11 +21,20 @@ const experienceCardInfo = {
   ],
   work: [
     {
+      from: '2021/04',
+      to: 'Present',
+      title: 'React 前端工程師',
+      subtitle: '聖森雲端科技 Shengsen Tech Inc.',
+      contentOne: '多人協作開發電商網站前後台、網路銀行系統等大型專案。主要使用 React + Redux + styled-components + axios 做前端開發。',
+      contentTwo: '',
+      state: '迄今'
+    },
+    {
       from: '2020/03',
       to: 'Present',
       title: '獨立接案',
       subtitle: '個人',
-      contentOne: '依照業主需求設計介面，並實作網站功能。',
+      contentOne: '依照業主需求實作網站功能，介面刻畫、路由控制、表單驗證、API 串接等。',
       contentTwo: '',
       state: '迄今'
     },

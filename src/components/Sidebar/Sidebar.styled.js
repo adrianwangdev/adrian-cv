@@ -10,7 +10,7 @@ const Menu = styled.aside`
   border-right: .1rem solid ${props => props.theme.colors.sidebarBorder};
   height: 100%;
   background: ${props => props.theme.colors.background.backgroundDefault};
-  transition: all .4s;
+  transition: all .3s;
 
   @media (max-width: 768px) {
     position: absolute;
@@ -56,7 +56,7 @@ const MenuTitle = styled.div`
     props.onlyName
       ? props.theme.colors.text.textDark
       : props.theme.colors.primary.primaryRegular};
-  transition: all .6s;
+  transition: all .3s;
   height: ${props => props.hide ? '0' : '3.4rem'};
   opacity: ${props => props.hide ? '0' : '1'};
   overflow: hidden;
@@ -68,7 +68,7 @@ const MenuTitle = styled.div`
   span {
     color: ${props => props.theme.colors.text.textDark};
     opacity: ${props => props.onlyName ? '0' : '1'};
-    transition: all .4s;
+    transition: all .3s;
   }
 `
 

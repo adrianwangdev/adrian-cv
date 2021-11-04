@@ -21,7 +21,7 @@ const SocialMediaAccountBlock = styled.div`
     font-size: 1.2rem;
     letter-spacing: .1rem;
     color: ${props => props.theme.colors.text.textLight};
-    transition: all .2s;
+    transition: all .3s;
     cursor: pointer;
 
     &:hover {

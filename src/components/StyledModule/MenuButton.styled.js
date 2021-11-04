@@ -7,7 +7,7 @@ const MenuButton = styled.div`
   left: 3.2rem;
   cursor: pointer;
   z-index: 1;
-  transition: all .4s;
+  transition: all .3s;
   transform: ${props =>
     props.isMenuOpen ? 'translateX(30rem)' : '0'
   };

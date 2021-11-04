@@ -22,12 +22,26 @@ const Routes = () => {
   const [sidebarDetail, setSidebarDetail] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  const details = {
+    cnName: '王柔燁',
+    enName: 'Adrian',
+    birth: '1994-06-08',
+    phone: '0910-319-855',
+    email: 'adrianwangdev@gmail.com',
+    city: '新北市',
+    job: '前端工程師',
+    isMarried: false,
+    drivingLicense: ['普通重型機車駕照', '普通小型車駕照'],
+  }
+
+  const contextValues = {
+    sidebarDetail, setSidebarDetail, isMenuOpen, lightTheme, setIsMenuOpen, setLightTheme, details
+  }
+
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <ThemeProvider theme={lightTheme ? LightMode : DarkMode}>
-        <CatStateContext.Provider
-          value={{ sidebarDetail, setSidebarDetail, isMenuOpen, lightTheme, setIsMenuOpen, setLightTheme }}
-        >
+        <CatStateContext.Provider value={contextValues}>
           <MainLayout context={CatStateContext}>
             <Switch>
               <Route exact path="/" component={Home} />

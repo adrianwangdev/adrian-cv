@@ -27,9 +27,7 @@ const Card = ({ category }) => {
 
   return (
     <>
-      {
-        renderCard(cardInfo[category])
-      }
+      { renderCard(cardInfo[category]) }
     </>
   )
 }

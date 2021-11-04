@@ -45,9 +45,17 @@ const Project = () => {
 
       <Row>
         <ProjectColumn>
+          <Card>
+            <ProjectInfo $recently>
+              <h3>聲明</h3>
+              <p>更多實作之專案因保密政策未能提供公開閱覽，敬請見諒。</p>
+            </ProjectInfo>
+          </Card>
+        </ProjectColumn>
+        <ProjectColumn>
           <Card href="https://adrianwangdev.github.io/reads-platform/">
             <PreviewImage $name="readsPlatform" />
-            <ProjectInfo $recently>
+            <ProjectInfo>
               <h3>Reads Platform</h3>
               <p>React / Redux / Firebase / Material-UI / RWD</p>
             </ProjectInfo>

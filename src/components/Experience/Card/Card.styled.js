@@ -22,6 +22,7 @@ const CardWrapper = styled.div`
   }
 
   p {
+    margin-bottom: .4rem;
     font-size: 1.4rem;
     color: ${props => props.theme.colors.text.textLight};
   }
@@ -30,13 +31,17 @@ const CardWrapper = styled.div`
 const CardTitle = styled.div`
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.2rem;
 
   h3 {
-    margin: .8rem 1.2rem 1.2rem 0;
+    margin-bottom: 0;
+    margin-right: 1.2rem;
     color: ${props => props.theme.colors.primary.primaryRegular};
   }
 
   p {
+    top: .2rem;
     color: ${props => props.theme.colors.text.textDark};
   }
 `

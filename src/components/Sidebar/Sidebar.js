@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { CatStateContext } from '@utilities/context'
 
 /* Components */
@@ -18,13 +18,13 @@ const Sidebar = () => {
   
   return (
     <Menu isMenuOpen={isMenuOpen && true}>
-      <MenuTitle hide={sidebarDetail ? true : false}>
+      <MenuTitle hide={!!sidebarDetail}>
         <p>Adrian<span>’s CV</span></p>
       </MenuTitle>
 
       <AboutMe />
       
-      <Nav moveDown={sidebarDetail ? true : false} >
+      <Nav moveDown={!!sidebarDetail} >
         <Navbar />
       </Nav>
 

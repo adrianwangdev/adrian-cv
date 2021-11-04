@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const AboutMeBlock = styled.div`
   margin-top: ${props => props.show ? '-2.4rem': '0'};
   opacity: ${props => props.show ? '1' : '0'};
-  transition: all .4s;
+  transition: all .3s;
 
   @media (max-width: 576px) {
     margin-top: ${props => props.show ? '2rem' : '0'};
@@ -72,7 +72,7 @@ const Detail = styled.div`
   a {
     text-decoration: none;
     color: ${props => props.theme.colors.primary.primaryRegular};
-    transition: all .4s;
+    transition: all .3s;
 
     &:hover {
       color: ${props => props.theme.colors.primary.primaryDark};

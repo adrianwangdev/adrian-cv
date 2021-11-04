@@ -1,15 +1,11 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { CatStateContext } from '@utilities/context'
 import { skills } from '@utilities/skillTag'
+import { ageGenerator, dateFormatter } from '@utilities/generator'
 
 /* Styles */
 import {
-  AboutMeBlock,
-  AvatarMask,
-  Description,
-  JobTitle,
-  Detail,
-  Birth
+  AboutMeBlock, AvatarMask, Description, JobTitle, Detail, Birth
 } from './AboutMe.styled'
 import { SkillTag } from '@components/StyledModule/SkillTag.styled'
 
@@ -18,7 +14,10 @@ import avatar from '@images/avatar.png'
 
 const AboutMe = () => {
 
-  const { sidebarDetail } = useContext(CatStateContext)
+  const {
+    sidebarDetail,
+    details: { cnName, job, birth, city, email }
+  } = useContext(CatStateContext)
 
   const skillsOnSidebar = skills.filter(skill => skill.onSidebar)
 
@@ -29,22 +28,22 @@ const AboutMe = () => {
   )
 
   return (
-    <AboutMeBlock show={sidebarDetail ? true : false}>
+    <AboutMeBlock show={!!sidebarDetail}>
       <AvatarMask>
         <img src={avatar} alt="avatar" />
       </AvatarMask>
       <Description>
         <JobTitle>
-          <h3>王柔燁</h3>
-          <p>前端工程師</p>
+          <h3>{cnName}</h3>
+          <p>{job}</p>
         </JobTitle>
         <Detail>
           <Birth>
-            <p>1994/06/08</p>
-            <p>26 歲</p>
-            <p>新北市</p>
+            <p>{dateFormatter(birth)}</p>
+            <p>{`${ageGenerator(birth)} 歲`}</p>
+            <p>{city}</p>
           </Birth>
-          <a href="mailto:adrianwangdev@gmail.com">adrianwangdev@gmail.com</a>
+          <a href={`mailto:${email}`}>{email}</a>
         </Detail>
       </Description>
       <SkillTag>

@@ -47,18 +47,6 @@ const Experience = () => {
       <PageWrapper>
         <Row>
 
-          <EducationColumn>
-            <Category>
-              <EducationIcon />
-              <h3>教育程度</h3>
-              <p>大學畢業</p>
-            </Category>
-
-            <Cards>
-              <Card category='education' />
-            </Cards>
-          </EducationColumn>
-
           <Column>
             <Category>
               <WorkIcon />
@@ -70,6 +58,18 @@ const Experience = () => {
               <Card category='work' />
             </Cards>
           </Column>
+
+          <EducationColumn>
+            <Category>
+              <EducationIcon />
+              <h3>教育程度</h3>
+              <p>大學畢業</p>
+            </Category>
+
+            <Cards>
+              <Card category='education' />
+            </Cards>
+          </EducationColumn>
 
         </Row>
       </PageWrapper>
