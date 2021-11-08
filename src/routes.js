@@ -26,7 +26,7 @@ const Routes = () => {
     cnName: '王柔燁',
     enName: 'Adrian',
     birth: '1994-06-08',
-    phone: '0910-319-855',
+    phone: '+886 910 319 855',
     email: 'adrianwangdev@gmail.com',
     city: '新北市',
     job: '前端工程師',
