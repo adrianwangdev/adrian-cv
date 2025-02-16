@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.js": "/adrian-cv/static/js/main.508de16d.chunk.js",
+    "main.js.map": "/adrian-cv/static/js/main.508de16d.chunk.js.map",
+    "runtime-main.js": "/adrian-cv/static/js/runtime-main.4e4a2662.js",
+    "runtime-main.js.map": "/adrian-cv/static/js/runtime-main.4e4a2662.js.map",
+    "static/js/2.697fcbf8.chunk.js": "/adrian-cv/static/js/2.697fcbf8.chunk.js",
+    "static/js/2.697fcbf8.chunk.js.map": "/adrian-cv/static/js/2.697fcbf8.chunk.js.map",
+    "index.html": "/adrian-cv/index.html",
+    "static/js/2.697fcbf8.chunk.js.LICENSE.txt": "/adrian-cv/static/js/2.697fcbf8.chunk.js.LICENSE.txt",
+    "static/media/about.b5ab8caa.svg": "/adrian-cv/static/media/about.b5ab8caa.svg",
+    "static/media/about.c58d502a.svg": "/adrian-cv/static/media/about.c58d502a.svg",
+    "static/media/avatar.8b629f88.png": "/adrian-cv/static/media/avatar.8b629f88.png",
+    "static/media/contact.38c49de0.svg": "/adrian-cv/static/media/contact.38c49de0.svg",
+    "static/media/cuEAZ.335f5bd4.png": "/adrian-cv/static/media/cuEAZ.335f5bd4.png",
+    "static/media/dots.5491f611.svg": "/adrian-cv/static/media/dots.5491f611.svg",
+    "static/media/education.80556ccd.svg": "/adrian-cv/static/media/education.80556ccd.svg",
+    "static/media/github.7373d409.svg": "/adrian-cv/static/media/github.7373d409.svg",
+    "static/media/greenfieldGrafik.a61c37f4.png": "/adrian-cv/static/media/greenfieldGrafik.a61c37f4.png",
+    "static/media/home.f117ddb5.svg": "/adrian-cv/static/media/home.f117ddb5.svg",
+    "static/media/homeBackground.77c92bce.png": "/adrian-cv/static/media/homeBackground.77c92bce.png",
+    "static/media/instagram.06858b01.svg": "/adrian-cv/static/media/instagram.06858b01.svg",
+    "static/media/mail.6d83f745.svg": "/adrian-cv/static/media/mail.6d83f745.svg",
+    "static/media/medium.a0bcb27c.svg": "/adrian-cv/static/media/medium.a0bcb27c.svg",
+    "static/media/menu.d4719187.svg": "/adrian-cv/static/media/menu.d4719187.svg",
+    "static/media/phone.bda6b0da.svg": "/adrian-cv/static/media/phone.bda6b0da.svg",
+    "static/media/project.0ee11b32.svg": "/adrian-cv/static/media/project.0ee11b32.svg",
+    "static/media/readsPlatform.a2081388.png": "/adrian-cv/static/media/readsPlatform.a2081388.png",
+    "static/media/whatever.c519659c.png": "/adrian-cv/static/media/whatever.c519659c.png",
+    "static/media/work.6f6f7d5d.svg": "/adrian-cv/static/media/work.6f6f7d5d.svg",
+    "static/media/work.756f301b.svg": "/adrian-cv/static/media/work.756f301b.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4e4a2662.js",
+    "static/js/2.697fcbf8.chunk.js",
+    "static/js/main.508de16d.chunk.js"
+  ]
+}
