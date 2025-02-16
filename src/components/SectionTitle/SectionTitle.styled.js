@@ -4,7 +4,7 @@ const SectionTitleStyled = styled.div`
   display: inline-block;
   font-size: 2.4rem;
   margin-bottom: 4rem;
-  animation: fadeInDown .6s;
+  animation: fadeInDown 0.6s;
 
   @media (max-width: 768px) {
     display: flex;
@@ -17,7 +17,7 @@ const SectionTitleStyled = styled.div`
 
   img {
     position: absolute;
-    bottom: -.8rem;
+    bottom: -0.8rem;
     right: -2.4rem;
     @media (max-width: 576px) {
       right: -1.2rem;
@@ -53,6 +53,4 @@ const SectionTitleStyled = styled.div`
   }
 `
 
-export {
-  SectionTitleStyled
-}
+export { SectionTitleStyled }
